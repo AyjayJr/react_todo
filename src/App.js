@@ -9,7 +9,6 @@ function App() {
     setTodoList(prevList => {
       return [...prevList, { id: Math.floor(Math.random() * 100) , text: todo }];
     });
-    console.log(todoList);
   };
 
   return (

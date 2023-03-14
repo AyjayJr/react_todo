@@ -7,12 +7,12 @@ const TodoList = props => {
 	}
 
 	const clickHandler = event => {
-
+		console.log(event.target.key);
 	};
 
 	return (
 		<div>
-			{props.list.map(item => (<Card key={item.id}><li>{item.text}</li></Card>))}
+			{props.list.map(item => (<Card onClick={clickHandler} key={item.id}><li>{item.text}</li></Card>))}
 		</div>
 	);
 };
