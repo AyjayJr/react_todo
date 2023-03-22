@@ -12,10 +12,16 @@ function App() {
     // console.log(todoList);
   };
 
+  const removeTodoHandler = (id) => {
+    setTodoList(prevList => {
+      return prevList.filter(item => item.id !== id);
+    })
+  };
+
   return (
     <div>
       <TodoForm onSubmit={addTodoHandler} />
-      <TodoList list={todoList} />
+      <TodoList list={todoList} onDelete={removeTodoHandler} />
     </div>
   );
 }

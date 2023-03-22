@@ -7,7 +7,8 @@ const TodoList = props => {
 	}
 
 	const clickHandler = event => {
-		console.log(event.target.key);
+		console.log(event.target.id);
+
 	};
 
 	return (
@@ -15,7 +16,9 @@ const TodoList = props => {
 			{props.list.map(item => (
 				<TodoItem
 					key={item.id}
+					id={item.id}
 					text={item.text}
+					onDelete={props.onDelete}
 				/>
 			))}
 		</div>
