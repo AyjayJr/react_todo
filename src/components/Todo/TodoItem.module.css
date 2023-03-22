@@ -1,0 +1,14 @@
+.deleteBtn {
+	align-self: end;
+}
+
+.todoItem {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 320px;
+	margin: 20px auto;
+	border: 1px solid black;
+	padding: 20px;
+	word-break: break-all;
+}
