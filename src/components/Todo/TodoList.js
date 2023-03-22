@@ -1,5 +1,5 @@
 import React from "react";
-import Card from "../UI/Card";
+import TodoItem from "./TodoItem";
 
 const TodoList = props => {
 	if (props.list.length === 0) {
@@ -12,7 +12,12 @@ const TodoList = props => {
 
 	return (
 		<div>
-			{props.list.map(item => (<Card onClick={clickHandler} key={item.id}><li>{item.text}</li></Card>))}
+			{props.list.map(item => (
+				<TodoItem
+					key={item.id}
+					text={item.text}
+				/>
+			))}
 		</div>
 	);
 };
