@@ -1,10 +1,9 @@
 .deleteBtn {
-	align-self: end;
+	margin-left: auto;
 }
 
 .todoItem {
 	display: flex;
-	justify-content: space-between;
 	flex-wrap: wrap;
 	width: 320px;
 	margin: 20px auto;

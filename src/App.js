@@ -6,6 +6,7 @@ function App() {
   const [todoList, setTodoList] = useState([]);
 
   const addTodoHandler = (todo) => {
+    // TODO: make ids perfectly unique
     setTodoList(prevList => {
       return [...prevList, { id: Math.floor(Math.random() * 100) , text: todo }];
     });

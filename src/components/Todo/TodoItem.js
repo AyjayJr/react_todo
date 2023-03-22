@@ -10,7 +10,8 @@ const TodoItem = props => {
 
 	return (
 		<div className={classes.todoItem}>
-			{props.text}
+			<button>O</button>
+			<span>{props.text}</span>
 			<button className={classes.deleteBtn} onClick={deleteHandler}>X</button>
 		</div>
 	);
