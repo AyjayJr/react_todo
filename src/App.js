@@ -53,6 +53,9 @@ function App() {
         onDelete={removeTodoHandler}
         onComplete={toggleCompleteHandler}
       />
+      <footer className={classes.footer}>
+        created by <a href='https://github.com/AyjayJr'>Anthony Garcia</a>
+      </footer>
     </div>
   );
 }
