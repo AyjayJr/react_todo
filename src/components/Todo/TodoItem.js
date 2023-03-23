@@ -1,5 +1,4 @@
-import React from "react";
-import Card from "../UI/Card";
+import React, { useState } from "react";
 
 import classes from './TodoItem.module.css'
 
@@ -8,9 +7,13 @@ const TodoItem = props => {
 		props.onDelete(props.id)
 	};
 
+	const changeHandler = () => {
+		props.onComplete(props.id);
+	};
+
 	return (
 		<div className={classes.todoItem}>
-			<button>O</button>
+			<input type='checkbox' onChange={changeHandler}/>
 			<span>{props.text}</span>
 			<button className={classes.deleteBtn} onClick={deleteHandler}>X</button>
 		</div>

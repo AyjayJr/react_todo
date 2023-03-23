@@ -3,13 +3,9 @@ import TodoItem from "./TodoItem";
 
 const TodoList = props => {
 	if (props.list.length === 0) {
+		// TODO: return some default text when list is empty
 		return;
 	}
-
-	const clickHandler = event => {
-		console.log(event.target.id);
-
-	};
 
 	return (
 		<div>
@@ -19,6 +15,7 @@ const TodoList = props => {
 					id={item.id}
 					text={item.text}
 					onDelete={props.onDelete}
+					onComplete={props.onComplete}
 				/>
 			))}
 		</div>
