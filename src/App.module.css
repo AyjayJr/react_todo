@@ -1,0 +1,9 @@
+.todoer {
+	width: 100%;
+	font-size: 80px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	margin: 50px auto 10px;
+	color:rgb(255, 255, 255);
+	text-align: center;
+	text-shadow: 4px 4px 5px black;
+}

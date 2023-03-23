@@ -5,6 +5,7 @@
 .todoItem {
 	display: flex;
 	flex-wrap: wrap;
+	flex-direction: row;
 	width: 320px;
 	margin: 20px auto;
 	border: 1px solid black;

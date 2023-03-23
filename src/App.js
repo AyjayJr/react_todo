@@ -1,10 +1,13 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
+
 import TodoForm from "./components/Todo/TodoForm";
 import TodoList from "./components/Todo/TodoList";
 
+import classes from './App.module.css';
+
 const reducer = (state, action) => {
   if (action.type === 'ADD') {
-    return [...state, {id: Math.random() * 100, text: action.val, complete: false}] 
+    return [...state, {id: crypto.randomUUID(), text: action.val, complete: false}] 
   }
 
   if (action.type === 'REMOVE') {
@@ -21,6 +24,7 @@ const reducer = (state, action) => {
       }
     })
   }
+
   return state;
 };
 
@@ -34,15 +38,15 @@ function App() {
 
   const removeTodoHandler = (val) => {
     dispatchTodo({type: 'REMOVE', id: val})
-  }
+  };
 
   const toggleCompleteHandler = (val) => {
     dispatchTodo({type: 'COMPLETE', id: val})
-    console.log(todoList);
   };
 
   return (
     <div>
+      <h1 className={classes.todoer}><i>todo-er</i></h1>
       <TodoForm onSubmit={addTodoHandler} />
       <TodoList
         list={todoList}
