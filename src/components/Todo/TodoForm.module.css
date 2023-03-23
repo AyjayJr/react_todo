@@ -1,0 +1,10 @@
+.todoInput {
+	height: 50px;
+	width: 340px;
+	padding: 10px;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+}

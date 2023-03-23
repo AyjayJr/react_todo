@@ -1,27 +1,31 @@
 import React, { useState } from "react";
 import Card from "../UI/Card";
 
+import classes from './TodoForm.module.css';
+
 const TodoForm = props => {
-	const [todo, setTodo] = useState('');	
+	const [todo, setTodo] = useState('');
 
 	const inputHandler = (event) => {
 		setTodo(event.target.value);
 	};
 
-	const buttonHandler = (event) => {
-		event.preventDefault();	
+	const submitHandler = (event) => {
+		event.preventDefault();
 		props.onSubmit(todo);
 		setTodo('');
 	};
 
 	return (
-		<Card>
-			<form>
-				<label htmlFor='todo-text'>Enter Todo Item</label>
-				<input id='todo-text' type='text' value={todo} onChange={inputHandler} />
-				<button onClick={buttonHandler}>Add to list</button>
-			</form>
-		</Card>
+		<form className={classes.container} onSubmit={submitHandler}>
+			<input
+				className={classes.todoInput}
+				type='text'
+				value={todo}
+				onChange={inputHandler}
+				placeholder='What do you need to do?'
+			/>
+		</form>
 	);
 };
 
