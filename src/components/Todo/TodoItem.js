@@ -13,7 +13,7 @@ const TodoItem = props => {
 
 	return (
 		<div className={classes.todoItem}>
-			<input type='checkbox' onChange={changeHandler}/>
+			<input className={classes.toggle} type='checkbox' onChange={changeHandler}/>
 			<span>{props.text}</span>
 			<button className={classes.deleteBtn} onClick={deleteHandler}>X</button>
 		</div>

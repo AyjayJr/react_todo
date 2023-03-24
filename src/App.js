@@ -44,6 +44,7 @@ function App() {
     dispatchTodo({type: 'COMPLETE', id: val})
   };
 
+
   return (
     <div>
       <h1 className={classes.todoer}><i>todo-er</i></h1>
@@ -53,6 +54,7 @@ function App() {
         onDelete={removeTodoHandler}
         onComplete={toggleCompleteHandler}
       />
+      <p>{/* somehow count the # of incomplete items */}</p>
       <footer className={classes.footer}>
         created by <a href='https://github.com/AyjayJr'>Anthony Garcia</a>
       </footer>

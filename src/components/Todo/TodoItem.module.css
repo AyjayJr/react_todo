@@ -1,5 +1,16 @@
 .deleteBtn {
 	margin-left: auto;
+	color: white;
+	border: none;
+	opacity: 0.9;
+	cursor: pointer;
+	border-radius: 4px;
+	background-color: #f44336;
+}
+
+.toggle {
+	border-radius: 100%;
+	background: none;
 }
 
 .todoItem {
